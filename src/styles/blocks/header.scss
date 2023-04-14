@@ -1,0 +1,51 @@
+.header {
+    height: 100px;
+    background-color: rgba(16, 16, 29, 0.9);
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+    &__logo {
+        a {
+            color: white;
+            font-family: 'Raleway';
+            font-size: 28px;
+            line-height: 33px;
+            font-weight: 800;
+            text-transform: uppercase;
+            span {
+                color: $blue1;
+                font: inherit;
+            }
+        }
+    }
+    &__menu {
+        display: flex;
+        align-items: flex-end;
+        height: 20px;
+        ul {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        li {
+            margin-left: 60px;
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+        a {
+            color: white;
+            font-size: 13px;
+            line-height: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            &:hover {
+                color: $blue1;
+            }
+        }
+    }
+}

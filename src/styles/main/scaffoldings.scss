@@ -1,0 +1,74 @@
+.visually-hidden:not(:focus):not(:active) {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+html {
+	font-size: 10px;
+	scroll-behavior: smooth;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+picture {line-height: 0;}
+.container {
+	width: calc(100% - 100px);
+	max-width: 1170px;
+	margin: 0 auto;
+	padding-left: $desktop-paddings;
+	padding-right: $desktop-paddings;
+	@media (max-width: $tablet-max) {
+		width: calc(100% - 60px);
+		padding-left: $tablet-paddings;
+		padding-right: $tablet-paddings;
+	}
+	@media (max-width: $phone-max) {
+		width: calc(100% - 40px);
+		padding-left: $phone-paddings;
+		padding-right: $phone-paddings;
+	}
+}
+a {
+  text-decoration: none;
+}
+p, span, a, button, li {
+	font-family: 'Lato';
+	font-size: 13px;
+	line-height: 16px;
+	font-weight: 400;
+}
+
+@keyframes wiggle {
+	1% {transform: translateX(3px) rotate(2deg);}
+	2% {transform: translateX(-3px) rotate(-2deg);}
+	3% {transform: translateX(3px) rotate(2deg);}
+	4% {transform: translateX(-3px) rotate(-2deg);}
+	5% {transform: translateX(2px) rotate(1deg);}
+	6% {transform: translateX(-2px) rotate(-1deg);}
+	7% {transform: translateX(2px) rotate(1deg);}
+	8% {transform: translateX(-2px) rotate(-1deg);}
+	9% {transform: translateX(1px) rotate(0);}
+	10% {transform: translateX(-1px) rotate(0);}
+}
+@keyframes moveleft {
+	from {
+		transform: translateX(-50%);
+	}
+	to {
+		transform: translateX(-100%);
+	}
+}
+@keyframes from-top {
+	0% {transform: translate(-50%, -2000px);}
+	70% {transform: translate(-50%, calc(-50% + 30px));}
+	90% {transform: translate(-50%, calc(-50% - 10px));}
+	100% {transform: translate(-50, -50%);}
+}
